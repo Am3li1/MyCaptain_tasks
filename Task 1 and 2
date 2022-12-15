@@ -1,0 +1,11 @@
+#Task 1
+#Write a python program which accepts the radius of a program which accepts the radius of a circle from the user and computes area
+r=float(input("Input the radius of the circle: "))
+area=3.14*(r**2)
+print(area)
+
+#Task 2
+#Write a python program to accept a filename from the user and print the extension of that
+fn=input("Enter the filename: ")
+f=fn.split(".")
+print ("The extension of the file is : " + f[-1])
