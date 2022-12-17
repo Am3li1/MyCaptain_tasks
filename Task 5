@@ -1,11 +1,15 @@
 #Write python code to create a function called most_frequent that takes a string and prints the letters in decreasing order and prints the letters in decreasing order of frequency. Use dictionaries
 def most_frequent(a):
     d={}
-    for key in a:
-        if key not in d:
-            d[key]=1
+    for k in a:
+        if k not in d:
+            d[k]=1
         else:
-            d[key]+=1
-    return d
+            d[k]+=1
+    t=tuple(d.items())
+    tnew=sorted(t, reverse=True, key=lambda a:a[1])
+    for i in range(len(tnew)):
+        print(t[i][0],'=',t[i][1])
+
 x=input("Please enter a string: ")
 print(most_frequent(x))
